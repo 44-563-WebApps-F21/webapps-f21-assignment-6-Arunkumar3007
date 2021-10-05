@@ -20,6 +20,40 @@
                 alert("access denied");
             }
         }
+
+        let usingImage = 1
+
+        function newImage(img) {
+            debugger;
+            switch (usingImage) {
+                case 1:
+
+                    document.getElementById("animals").src = "Alabatross.jpg"
+
+                    usingImage++;
+
+                    break;
+
+                case 2:
+
+                    document.getElementById("animals").src = "Alligator.jpg"
+
+                    usingImage++;
+
+                    break;
+
+                default:
+
+                    usingImage = 1;
+
+                    document.getElementById("animals").src = "peacock.jpg"
+
+                    break;
+
+            }
+
+        }
+
     </script>
 </head>
 
@@ -36,6 +70,13 @@
     </form>
 
     <p id="result">Attempts display here </p>
+
+    <div class="container">
+
+        <img src="peacock.jpg" id="animals" alt="peacock" style="height: 200px;" width="200px;"
+            onclick="newImage(this)" />
+
+    </div>
 
 </body>
 
